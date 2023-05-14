@@ -1,0 +1,333 @@
+/* Reset de css*/
+
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, form, fieldset, blockquote {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	font-weight: normal;
+}
+table { border-collapse:collapse; border-spacing:0; }
+td, th, caption { font-weight:normal; text-align:left; }
+img, fieldset { border: 0; }
+ol { padding-left:1,4em; list-style: decimal; }
+ul { padding-left:1,4em; list-style: square; }
+q:before, q:after { content:''; }
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+
+/*Fin del reset*/
+
+.intro{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	z-index: 1;
+	background-color: #000;
+	transform: 1s;
+}
+
+.intro img{
+	top: 150px;
+	position: absolute;
+}
+
+.logo{
+	font-size: 3rem;
+	color:white;
+}
+
+.logo-parts{
+	position: relative;
+	display: inline-block;
+	bottom: -20px;
+	opacity: 0;
+	font-size: 2rem;
+}
+
+.logo-parts.active{
+	bottom: 0;
+	opacity: 1;
+	transition: ease-in-out 0.5s;
+}
+
+.logo-parts.fade{
+	bottom: 250px;
+	opacity: 0;
+	transition: ease-in-out 0.5s;
+}
+
+
+@font-face {
+	font-family: 'Barlow';
+	src: url('Fuentes/Barlow/Barlow-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'storm';
+	src: url('Fuentes/storm_gust/Storm Gust.otf') format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+header {
+	height: 1000px;
+	width: 100%;
+
+	background-image: url("../Imagenes_videos/Portada.png");
+	background-size: cover;
+	background-repeat: no-repeat; 
+	background-position: center center; 
+	background-attachment: fixed;
+
+	padding-top: 50px;
+	text-align: center;
+}
+
+nav {
+	background-color: #242424;
+	height: 65px;
+	width: 100%;
+	text-align: left;
+	position: fixed; /*para que el menú se quede estático cuando bajamos*/
+	z-index: 1;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+nav ul {
+	list-style: none;
+	display: inline-block; /*para que estén en línea*/
+	padding-top: 25px;
+	padding-left: 10px;
+}
+
+nav ul li {
+	float: left;
+	font-family: 'Barlow', Calibri;
+	font-size: 20px;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+
+nav ul li a:hover {
+	background-color: #4b4b4b;
+}
+
+body {
+	background-color: #121212;
+	background-image: url('Imagenes/Fondo2.jpg');
+	background-size: 100% 100%;
+	font-family: Barlow, Calibri;
+}
+
+h1 {
+	padding-bottom: 10px;
+	font-size: 60px;
+	font-weight: normal;
+	color: white;
+	text-align: center;
+	font-family: storm, Calibri;
+}
+
+h2 {
+	padding-top: 10px;
+	font-family: storm;
+	color: #fff;
+	font-size: 35px;
+	margin-bottom: 10px;
+}
+
+h3 {
+	padding-top: 10px;
+	font-family: storm;
+	color: #fff;
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+
+main {
+	text-align: center;
+	/*background-color: #242424;
+	width: 80%;
+	margin-left: 200px;*/
+}
+
+p {
+	font-size: 10spx;
+	margin-bottom: 20px;
+	color: #fff;
+}
+
+li {
+	color: #fff;
+}
+
+table {
+	color: #fff;
+	margin: 0 auto;
+	border:3px solid white ;
+}
+
+td {
+	border:3px solid white ;
+	padding: 10px;
+}
+
+th{
+	border:3px solid white ;
+	padding: 10px;
+	text-align: center;
+}
+footer{
+	padding: 15px;
+}
+
+.text {
+	color: white;
+	text-shadow:1px 1px 1px black ;
+	font-family: Barlow, Calibri;
+	text-align: center;
+	font-weight: bolder;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+.container   {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 700px;
+	height: 70px ;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    justify-content: center;
+	align-content: center;
+	margin-block: 10px;
+}
+
+#Campaña{
+	padding: 1.5rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#Objetivos{
+	padding: 2rem;
+}
+
+.section{
+	flex: 1;
+  	min-width: 0;
+  	overflow: hidden;
+  	padding: 2rem;
+}
+
+.scroll{
+	overflow-y: scroll;
+	height: 90vh;
+}
+
+#div1{
+	background-image: url("../Imagenes_videos/fondo_naranja.png");
+    /*background-color: gainsboro;*/
+    background-repeat: no-repeat;
+    background-origin: content-box, padding-box;
+}
+
+#div2{
+	background-image: url("../Imagenes_videos/fondo_rojo.png");
+	/*background-color: gainsboro;*/
+    background-repeat: no-repeat;
+    background-origin: content-box, padding-box;
+    
+}
+
+#Equipo {
+	float: center;
+	padding-bottom: 25px;
+}
+
+#Lema {
+	color: #fff;
+	margin-top: 25px;
+	padding-top: 10px;
+	font-size: 15px;
+	width: 100%;
+}
+
+#menu {
+	margin: 15px 15px;
+	padding: 15px;
+	color: #fff;
+	/*font-weight: bold;*/
+	text-decoration: none;
+}
+
+#titulo {
+	margin: 15px 65px;
+	padding: 15px;
+	color: #fff;
+	text-decoration: none;
+}
+#titulo:hover {
+	background-color: initial;
+}
+
+#Descripción_corta {
+	width: 90%;
+	height: 100px;
+	background-color: #4b4b4b;
+	padding: 25px;
+	margin-bottom: 50px;
+	margin-left: 75px;
+	
+}
+
+#Autoría {
+	padding: 25px;
+}
+
+#logo {
+	margin-left: 80px;
+	float: left;
+	width: 75px;
+	height: 75px;
+}
+
+#logo2{
+	float: inherit;
+	width: 75px;
+	height: 75px;
+}
+
+#Preguntas_frecuentes{
+	padding: 1.5rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+img.historia{
+	width: 80%
+}
+
+img.gif{
+	width: 80%
+}
+
