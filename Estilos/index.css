@@ -145,6 +145,7 @@ h1 {
 }
 
 h2 {
+	background: linear-gradient(to bottom right, #000000 35% , #FF0000);
 	padding-top: 10px;
 	font-family: storm;
 	color: #fff;
@@ -153,6 +154,7 @@ h2 {
 }
 
 h3 {
+	background: linear-gradient(to bottom right, #000000 35% , #FF0000);
 	padding-top: 10px;
 	font-family: storm;
 	color: #fff;
@@ -222,6 +224,21 @@ footer{
 	margin-block: 10px;
 }
 
+.container-1 {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 700px;
+	height: 70px ;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -625%);
+    font-size: 15px;
+    justify-content: center;
+	align-content: center;
+	margin-block: 10px;
+}
+
 #Campaña{
 	padding: 1.5rem;
 	display: flex;
@@ -229,19 +246,49 @@ footer{
 }
 
 #Objetivos{
-	padding: 2rem;
+	padding: 1.5rem;
+	display: inline-block;
+	flex-wrap: nowrap;
 }
 
-.section{
-	flex: 1;
-  	min-width: 0;
-  	overflow: hidden;
-  	padding: 2rem;
+.columna-izquierda video{
+	max-width: 100%;
+	height: auto;
 }
 
-.scroll{
+.columna-izquierda img,
+.columna-derecha img {
+	max-width: 60%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	padding: 1.5rem;
+}
+
+.columna-derecha-scroll{
 	overflow-y: scroll;
 	height: 90vh;
+	margin-bottom: 40px;
+	float: right;
+	width: 50%;
+}
+
+.columna-izquierda{
+	float: left;
+	width: 50%;
+}
+.columna-derecha{
+	float: right;
+	width: 50%;
+}
+
+.columna-izquierda img,
+.columna-derecha img {
+	max-width: 60%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	padding: 1.5rem;
 }
 
 #div1{
@@ -259,9 +306,16 @@ footer{
     
 }
 
+#Descripción{
+	background: linear-gradient(to bottom right, #000000 45% , #FF0000);
+	border: 4px dotted #FFFFFF;
+}
+
 #Equipo {
+	display: inline-block;
 	float: center;
-	padding-bottom: 25px;
+	padding:1.5rem;
+	margin-bottom: 20px;
 }
 
 #Lema {
@@ -322,12 +376,14 @@ footer{
 	display: flex;
 	flex-wrap: wrap;
 }
-
-img.historia{
-	width: 80%
+#Canción_original{
+	padding: 2rem;
 }
 
-img.gif{
-	width: 80%
+#Disclaimer{
+	text-align: center;
 }
 
+#Comentarios{
+	padding: 1.5rem;
+}
